@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(255, 183, 76);
+    border-right: 10px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-image: url('../img/yerbaborder.png') 30% round;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-top-width: 20px;
+}
+
+h1, h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#defaultChart {
+border: inset 10px rgb(11, 138, 49);
+
+}
