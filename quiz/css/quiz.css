@@ -1,0 +1,101 @@
+body {
+  background: #fff;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+.can-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin-top: 48px;
+}
+.can {
+  width: 110px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(.22,1.21,.36,1.01);
+  z-index: 1;
+}
+.can.zooming {
+  position: fixed;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%) scale(45);  /* 3x the zoom */
+  transition: transform 1.2s cubic-bezier(.22,1.21,.36,1.01);
+  z-index: 10;
+  pointer-events: none;
+}
+#yellow-overlay {
+  position: fixed;
+  inset: 0;
+  background: #ffd400;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 8;
+  transition: opacity 0.5s;
+}
+#yellow-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Fade modal in and out with overlay */
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: none;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+.modal.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 24px 36px;
+  border-radius: 14px;
+  min-width: 240px;
+  text-align: center;
+  box-shadow: 0 0 12px #4443;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 8px; right: 18px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.star {
+  margin-top: 40px;
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: grayscale(1);
+  transition: filter 0.3s, opacity 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.star.enabled {
+  filter: drop-shadow(0 0 15px gold);
+  opacity: 1;
+  cursor: pointer;
+}
+.star.enabled polygon {
+  fill: gold !important;
+}
+.star polygon {
+  transition: fill 0.3s;
+}
+#result {
+  font-size: 1.5em;
+  color: green;
+  margin-top: 18px;
+}
