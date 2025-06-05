@@ -1,73 +1,84 @@
 const questions = [
   {
-    question: "Which country is most famous for yerba mate?",
-    options: ["Argentina", "Japan", "Norway"],
-    correct: 0,
-    answered: false
+    question: "How do you usually drink yerba mate?",
+    options: ["With friends", "Alone", "At a cafe"],
+    labels: ["social", "solo", "urban"],
+    answered: false,
+    userAnswer: null
   },
   {
-    question: "What is the traditional container for drinking mate?",
-    options: ["Gourd", "Mug", "Glass"],
-    correct: 0,
-    answered: false
+    question: "Which flavor appeals to you?",
+    options: ["Citrus", "Berry", "Traditional"],
+    labels: ["fresh", "sweet", "classic"],
+    answered: false,
+    userAnswer: null
   },
   {
-    question: "What does 'yerba' mean in Spanish?",
-    options: ["Leaf", "Herb", "Tea"],
-    correct: 1,
-    answered: false
+    question: "What's your preferred energy level?",
+    options: ["Chill", "Focused", "Energized"],
+    labels: ["calm", "focus", "power"],
+    answered: false,
+    userAnswer: null
   },
   {
-    question: "Yerba mate contains which stimulant?",
-    options: ["Caffeine", "Theobromine", "Both"],
-    correct: 2,
-    answered: false
+    question: "Pick a time of day:",
+    options: ["Morning", "Afternoon", "Night"],
+    labels: ["start", "mid", "late"],
+    answered: false,
+    userAnswer: null
   },
   {
-    question: "Which vitamin is found in yerba mate?",
-    options: ["Vitamin C", "Vitamin B", "Vitamin K"],
-    correct: 1,
-    answered: false
+    question: "What's your favorite activity?",
+    options: ["Sports", "Studying", "Relaxing"],
+    labels: ["active", "studious", "rest"],
+    answered: false,
+    userAnswer: null
   }
 ];
+
+// We'll use Q1 and Q3 (indexes 0 and 2)
+const twoInputResults = {
+  "social-calm":   "You’re a chill socialite! Mate is your excuse for good company and good vibes.",
+  "social-focus":  "Social and focused—you lead group study sessions!",
+  "social-power":  "You’re the spark of the party. Friends and energy—what a combo!",
+  "solo-calm":     "You recharge alone with mate, embracing peace and reflection.",
+  "solo-focus":    "Solo and focused—you get things done on your own terms.",
+  "solo-power":    "You power through the day, independently unstoppable!",
+  "urban-calm":    "Urban explorer, chill mood. You sip mate while people-watching at your favorite café.",
+  "urban-focus":   "Café crawler with a focused mindset. Work, art, life—you're doing it all.",
+  "urban-power":   "The city can barely keep up! You energize your urban adventures with mate.",
+};
 
 const cans = [...document.querySelectorAll('.can')];
 const star = document.getElementById('star');
 const resultDiv = document.getElementById('result');
-const modal = document.getElementById('question-modal');
+const yellowOverlay = document.getElementById('yellow-overlay');
+const quizContent = document.getElementById('quiz-content');
 const questionText = document.getElementById('question-text');
 const answersDiv = document.getElementById('answers');
-const closeModal = document.querySelector('.close');
-const yellowOverlay = document.getElementById('yellow-overlay');
+const closeBtn = document.getElementById('close-btn');
 
 function showModal(qidx) {
   yellowOverlay.classList.add('active');
-  // Setup modal content
   questionText.textContent = questions[qidx].question;
   answersDiv.innerHTML = '';
   questions[qidx].options.forEach((opt, idx) => {
     const btn = document.createElement('button');
     btn.textContent = opt;
-    btn.style.display = "block";
-    btn.style.margin = "12px auto";
     btn.onclick = () => {
-      // Fade out modal and overlay together
+      questions[qidx].answered = true;
+      questions[qidx].userAnswer = idx;
+      cans[qidx].classList.add('answered');
       yellowOverlay.classList.remove('active');
-      modal.classList.remove('visible');
       cans[qidx].classList.remove('zooming');
       setTimeout(() => {
-        modal.classList.add('hidden');
-        questions[qidx].answered = true;
+        quizContent.style.opacity = 0;
         checkAllAnswered();
-      }, 500); // match CSS transition
+      }, 500);
     };
     answersDiv.appendChild(btn);
   });
-  modal.classList.remove('hidden');
-  // Fade in (next frame)
-  setTimeout(() => {
-    modal.classList.add('visible');
-  }, 10);
+  quizContent.style.opacity = 1;
 }
 
 cans.forEach((can, idx) => {
@@ -79,12 +90,11 @@ cans.forEach((can, idx) => {
   });
 });
 
-closeModal.onclick = function() {
+closeBtn.onclick = function() {
   yellowOverlay.classList.remove('active');
-  modal.classList.remove('visible');
   cans.forEach(c => c.classList.remove('zooming'));
   setTimeout(() => {
-    modal.classList.add('hidden');
+    quizContent.style.opacity = 0;
   }, 500);
 };
 
@@ -93,8 +103,26 @@ function checkAllAnswered() {
     star.classList.add('enabled');
     star.classList.remove('disabled');
     star.style.cursor = 'pointer';
-    star.onclick = function() {
-      resultDiv.classList.remove('hidden');
-    };
+    star.onclick = showResult;
   }
+}
+
+function showResult() {
+  // Use Q1 and Q3 for output (indexes 0 and 2)
+  const key1 = questions[0].labels[questions[0].userAnswer];
+  const key2 = questions[2].labels[questions[2].userAnswer];
+  const resultKey = `${key1}-${key2}`;
+  let resultText = twoInputResults[resultKey] ||
+    "You’ve got a mate style all your own!";
+
+  // Get the user's favorite flavor (Q2, index 1)
+  const flavor = questions[1].options[questions[1].userAnswer];
+  resultText += ` <br><span style="font-size:1.15em;">Your favorite flavor is <b>${flavor}</b>.</span>`;
+
+  let choicesText = `<br><div style="font-size:1.1em">Your choices:</div>`;
+  questions.forEach((q, i) => {
+    choicesText += `<div><b>Q${i+1}:</b> ${q.options[q.userAnswer]}</div>`;
+  });
+  resultDiv.innerHTML = `<div>${resultText}</div>` + choicesText;
+  resultDiv.classList.remove('hidden');
 }
