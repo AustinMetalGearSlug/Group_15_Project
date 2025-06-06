@@ -36,7 +36,6 @@ const questions = [
   }
 ];
 
-// We'll use Q1 and Q3 (indexes 0 and 2)
 const twoInputResults = {
   "social-calm":   "You’re a chill socialite! Mate is your excuse for good company and good vibes.",
   "social-focus":  "Social and focused—you lead group study sessions!",
@@ -115,7 +114,7 @@ function showResult() {
   let resultText = twoInputResults[resultKey] ||
     "You’ve got a mate style all your own!";
 
-  // Get the user's favorite flavor (Q2, index 1)
+  // Append favorite flavor (Q2, index 1)
   const flavor = questions[1].options[questions[1].userAnswer];
   resultText += ` <br><span style="font-size:1.15em;">Your favorite flavor is <b>${flavor}</b>.</span>`;
 
@@ -126,3 +125,12 @@ function showResult() {
   resultDiv.innerHTML = `<div>${resultText}</div>` + choicesText;
   resultDiv.classList.remove('hidden');
 }
+
+/* Add vertical borders on load */
+window.addEventListener('DOMContentLoaded', () => {
+  const left = document.createElement('div');
+  left.className = "border-left";
+  const right = document.createElement('div');
+  right.className = "border-right";
+  document.querySelector('.border-wrap').append(left, right);
+});

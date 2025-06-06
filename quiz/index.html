@@ -6,27 +6,31 @@
   <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
-  <div class="can-row">
-    <img src="img/yerbacan.png" class="can" id="can1">
-    <img src="img/yerbacan.png" class="can" id="can2">
-    <img src="img/yerbacan.png" class="can" id="can3">
-    <img src="img/yerbacan.png" class="can" id="can4">
-    <img src="img/yerbacan.png" class="can" id="can5">
-  </div>
-  <div id="yellow-overlay">
-    <div id="quiz-content">
-      <span class="close" id="close-btn">&times;</span>
-      <div id="question-text"></div>
-      <div id="answers"></div>
+  <div class="border-wrap">
+    <div class="main-content">
+      <div class="can-row">
+        <img src="img/yerbacan.png" class="can" id="can1">
+        <img src="img/yerbacan.png" class="can" id="can2">
+        <img src="img/yerbacan.png" class="can" id="can3">
+        <img src="img/yerbacan.png" class="can" id="can4">
+        <img src="img/yerbacan.png" class="can" id="can5">
+      </div>
+      <div id="yellow-overlay">
+        <div id="quiz-content">
+          <span class="close" id="close-btn">&times;</span>
+          <div id="question-text"></div>
+          <div id="answers"></div>
+        </div>
+      </div>
+      <!-- SVG STAR SHAPE BUTTON, disabled/enabled by JS -->
+      <svg id="star" class="star disabled" width="120" height="120" viewBox="0 0 100 100">
+        <polygon 
+          points="50,8 61,38 95,38 67,57 77,88 50,70 23,88 33,57 5,38 39,38"
+          fill="#cccccc" stroke="black" stroke-width="3"/>
+      </svg>
+      <div id="result" class="hidden"></div>
     </div>
   </div>
-  <!-- SVG STAR SHAPE BUTTON, disabled/enabled by JS -->
-  <svg id="star" class="star disabled" width="120" height="120" viewBox="0 0 100 100">
-    <polygon 
-      points="50,8 61,38 95,38 67,57 77,88 50,70 23,88 33,57 5,38 39,38"
-      fill="#cccccc" stroke="black" stroke-width="3"/>
-  </svg>
-  <div id="result" class="hidden"></div>
   <script src="js/quiz.js"></script>
 </body>
 </html>
