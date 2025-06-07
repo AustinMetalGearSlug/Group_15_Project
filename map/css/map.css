@@ -1,0 +1,126 @@
+body {
+  background-color: #FCF8DE;
+}
+
+
+h1,h2,h3 {
+  font-family: 'Times New Roman', Times, serif
+}
+
+
+h1 {
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  font-size: 200%;
+  color:#325943;
+  text-align: center;
+}
+
+
+h2 {
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  font-size: 200%;
+  color:#590A0A;
+  text-align: center;
+}
+
+
+.header-section {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 3px #325943;
+  background-color: #F2D750;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color:#590A0A;
+}
+
+
+.minor-section {
+  max-width: 5000px;  
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 3px #325943;
+  background-color: #F2D750;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color:#590A0A;
+  text-align: left;
+ 
+}
+
+
+.map-section {
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.map-box {
+  display: flex;
+  gap: 20px;
+  border: solid 3px #325943;
+  background-color: #F2D750;
+  border-radius: 5px;
+  padding: 20px;
+  color: #590A0A;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+
+.button-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 150px;
+}
+
+
+.button-section button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #325943;
+  color: white;
+  cursor: pointer;
+}
+
+
+.button-section button:hover {
+  background-color: #274833;
+}
+
+
+.ucsc-mapbox {
+  flex: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #325943;
+}
+
+
+.ucsc_campus {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #325943;
+}
+
+
+
