@@ -1,50 +1,37 @@
 
 
 
-//created a listener for when college button is pressed, display college or area location
-$(document).ready(function() {
-   
-  //McHenry Library Button
-  $("#henryBtn").click(function(){
-  $("#output").html(`
-    <p><strong>McHenry Library Global Village Cafe</strong> - Cafe serves coffee, sandwiches, pastries and also a
-    variety of Yerba Mate drinks to choose but busy during in peak hours in the morning and afternoon.</p>
-    <p><strong>McHenry Library Vending Machines</strong> - McHenry Library has two vending machines located on the main
-    floor next to the printer and copyers with snacks and Yerba Mate available, down stairs at the Digital Scholarship Commons
-    are two vending machines, one snack and one Pepsi but do not carry Yerba Mate.</p>
-    `)
-
- })
-
-    //Quarry Plaza button
-      $("#quarryBtn").click(function() {
+//button listner for oakes college
+ $("#oakesBtn").on("click", function () {
+        $("#mapImage").attr("src", "img/ucsc_campus_oakes.png");
         $("#output").html(`
-          <p><strong>Big Tree Campus Store Vending Machine</strong> - Does not offer
-          Yerba Mate but has snacks and other drinks.</p>
-          <p><strong>Slug Stop</strong> - Does have Yerba Mate stocked throughout the day
-           with a variety of flavors to choose but busy during peak hours.</p>
-          <p><strong>Iveta Campus Cafe</strong> - Has Yerba Mate stocked with flavors such as mint, blue, cranberry and lemon.</p>
+            <p><strong>Oakes Cafe</strong> – Located at the Oakes Commons building. Serves Yerba Mate flavors including 
+            Enlighten Mint, Bluephoria, Berry Lemonade, Lemon Elation, Tropical Uprising, and Revel Berry.</p>
+
+            <p><strong>Oakes Academic Building</strong> – Located between the Oakes Library and the 
+            bottom floor restroom. Offers Pepsi drinks and snacks, but no Yerba Mate.</p>
+
+            <p><strong>Oakes Laundry Room</strong> – Located at the Oakes laundry room. Sells Pepsi, 
+            energy drinks, and snacks, but no Yerba Mate.</p>
         `);
-      })
-      //Oakes College Button
-        $("#oakesBtn").click(function() {
-          $("#output").html(`
-         <p><strong>Oakes Cafe</strong> -  Located at the Oakes Commons building serves Yerba Mate ranging from  
-         enlighten mint, bluephoria,berry lemonade, lemon elation, tropical uprising and also revel berry.</p>
-
-
-         <p><strong>Oakes Academic Building</strong> - Located between the Oaks Library and bottom floor
-         restroom but serves Pepsi drinks and also a snack vending machine but no Yerba Mate.</p>
-
-
-         <p><strong>Oakes Laundry Room</strong> -  Located at the Oakes laundry room but serves
-         Pepsi and energy drinks but also a snack vending machine but does not stock Yerba Mate.</p>
-        `);
-          })
-        //Stevenson College Button
-        $("#stevensonBtn").click(function(){
+     })
+//button listner for McHenry library 
+     $("#henryBtn").on("click", function() {
+        $("#mapImage").attr("src", "img/ucsc_campus_henry.png");
         $("#output").html(`
-        <p><strong>Steven Coffee House</strong> -  Located at the main Stevenson College building serves Yerba Mate
+     <p><strong>McHenry Library Global Village Cafe</strong> - Cafe serves coffee, sandwiches, pastries and also a 
+     variety of Yerba Mate drinks to choose but busy during in peak hours in the morning and afternoon.</p>
+
+     <p><strong>McHenry Library Vending Machines</strong> - McHenry Library has two vending machines located on the main
+     floor next to the printer and copyers with snacks and Yerba Mate available, down stairs at the Digital Scholarship Commons 
+     are two vending machines, one snack and one Pepsi but do not carry Yerba Mate.</p>
+      `);   
+    })    
+//button listner for Stevenson College 
+     $("#stevensonBtn").on("click", function (){
+     $("#mapImage").attr("src", "img/ucsc_campus_stevensons.png");
+     $("#output").html(`
+         <p><strong>Steven Coffee House</strong> -  Located at the main Stevenson College building serves Yerba Mate
          and also serves coffee, soft drinks, boba tea with the Stevenson rec room down the hall.</p>
        
         <p><strong>Stevenson Rec Room</strong> - In the same building as the Stevenson Coffee House has
@@ -54,12 +41,12 @@ $(document).ready(function() {
         Stevenson library varies with its selection of energy and soft drinks.
         Yerba Mate is stocked but varies between other soft and energy drinks but
         also has a selection of snacks to choose from.</p>
-
-            `);
-      })
-       //Cowell College Button
-       $("#cowellBtn").click(function(){
-        $("#output").html(`
+        `);  
+     })
+//button listenr for Cowell College 
+     $("#cowellBtn").on("click", function (){
+     $("#mapImage").attr("src", "img/ucsc_campus_cowell.png");
+     $("#output").html(`
         <p><strong>Cowell Coffee College</strong> - The coffee shop doesn't serve Yerba Mate but handmade
         espresso drinks, teas and serves a selection of pastries.</p>
 
@@ -69,63 +56,52 @@ $(document).ready(function() {
         <p><strong>Parkman Laundry Room</strong> - Located at the Cowell laundry room
         offering Pepsi soft and energy drinks and also snacks.</p>
 
-        <p><strong>Cowell Apt 1 Laundry Room/strong> - Located at the Cowell laundry room and computer room
+        <p><strong>Cowell Apt 1 Laundry Room</strong> - Located next to the Cowell laundry room and computer room,
         serves Pepsi soft and energy drinks and also snacks.</p>
-
-            `);
-      })
-
-     //Crown College Button
-     $("#crownBtn").click(function(){
+        `)
+     })
+     //buttin listener for Crown College 
+     $("#crownBtn").on("click", function (){
+     $("#mapImage").attr("src", "img/ucsc_campus_crown.png");
      $("#output").html(`
         <p><strong>Banana Joe's Late Night</strong> - Located at Crown College offers
         Yerba Mate and also late night pizza, burgers, snacks, coffee and more. </p>
 
         <p><strong>Crown College Lounge</strong> - Vending machine located inside at the Crown Lounge, serving
-        snacks, such as chips, candy and granola but dosent offer Yerba Mate. </p>
+        snacks, such as chips, candy and granola but doesn't offer Yerba Mate. </p>
 
         <p><strong>Crown Fireside Lounge</strong> -  Located at the Crown College Fireside Lounge, offers
        Pepsi soft and energy drinks and also a snack vending machine but doesn't stock Yerba Mate. </p>
 
        <p><strong> Crown/Merrill Laundry Room</strong> - Located at the Crown/Merrill laundry room
-        offering Pepsi soft and energy drinks and also snacks but doswent offer Yerba Mate. </p>
-
-           `);
+        offering Pepsi soft and energy drinks and also snacks but doesn't offer Yerba Mate. </p>
+        `)
      })
-
-     //Kresge College Button
-     $("#kresgeBtn").click(function(){
+     //Button listener for Kresge College 
+     $("#kresgeBtn").on("click", function(){
+     $("#mapImage").attr("src", "img/ucsc_campus_kresge.png");
      $("#output").html(`
-     <p><strong>Owl’s Nest</strong> - Located at the Kresge College across from the Kresge Academic building serving a
-     variety of coffee, soft drinks, snacks, bagels and sandwiches but most importantly Yerba Mate.</p>
-
-      `);
-     }) 
-     //Merrill College Button
-     $("#merrillBtn").click(function(){
-     $("#output").html(`
-      <p><strong>Merill Market</strong> -  Located at the Merrill College plaza offers
-      Yerba Mate as well as coffee, snacks, meals and other grocery and convenience items, but who wants that?.</p>
-
-      `);
+        <p><strong>Owl’s Nest</strong> - Located at the Kresge College across from the Kresge Academic building serving a
+        variety of coffee, soft drinks, snacks, bagels and sandwiches but most importantly Yerba Mate.</p>
+        `)
      })
-   
-     //Rachel Carson Button
-     $("#rachelBtn").click(function(){
+     //Button listner for Rachel Carson College
+     $("#rachelBtn").on("click", function(){
+     $("#mapImage").attr("src", "img/ucsc_campus_carson.png");
      $("#output").html(`
-      <p><strong>Rachel Carson Dorms A/l and B/l</strong> - Both dorm buildings at Rachel Carson offer vending machines stocking
-      snacks and drinks, selection of stock may very but dorm building A/1 has a better selection of drinks but most importantly Yerba Mate.</p>
-      `);
-     })
-
-     //John R. Lewis Button/ College Nine
-     $("#lewisBtn").click(function(){
-      $("#output").html(`
-        <p><strong>University Center Bistro & Cafe</strong> - Located at the top floor John R. Lewis dining hall
+        <p><strong>Rachel Carson Dorms A/L and B/L</strong> - Both dorm buildings at Rachel Carson offer vending machines stocking
+      snacks and drinks, selection of stock may vary but dorm building A/1 has a better selection of drinks but most importantly Yerba Mate.</p>
+        `)
+    })
+    //Button listener for Lewis/Nine College 
+    $("#lewisBtn").on("click", function(){
+    $("#mapImage").attr("src", "img/ucsc_campus_nine.png");
+    $("#output").html(`
+       <p><strong>University Center Bistro & Cafe</strong> - Located at the top floor John R. Lewis dining hall
         is the University Center Cafe, serving Yerba Mate, coffee, snacks and other items throughout the day.</p>
 
       <p><strong>Social Science 1 Building</strong> - Pepsi Vending located the at the social science building 1,
-       dosen't serve Yerba Mate only soft and energy drinks.</p>
+       does not serve Yerba Mate only soft and energy drinks.</p>
 
        <p><strong>Social Science 2 Building</strong> - Snack Vending located at the social
        science building 2, dosen't serve Yerba Mate or other drinks but has chips, granola and other snacks.</p>
@@ -136,33 +112,32 @@ $(document).ready(function() {
 
        <p><strong> College Nine Rec lounge</strong> - Located at the College Nine rec lounge, has both a snack and
        a drink vending machine. Often stocked with Yerba Mate and also other drinks such as Weird Tea and other
-       energy drinks.</p>
-        `);
-     })
+       energy drinks.</p>   
+        `)
+    })
+    //Button listener for Porter College 
+    $("#porterBtn").on("click", function(){
+    $("#mapImage").attr("src", "img/ucsc_campus_porter.png");
+    $("#output").html(`
+          <p><strong> Porter Market</strong> - Located at the Porter Commons building the Porter Market offers Yerba Mate
+     as well ready to go meals, a variety of hand made espresso drinks, snacks and sandwiches.</p>
 
-
-    //Porter College Button
-     $("#porterBtn").click(function(){
-     $("#output").html(`
-     <p><strong> Porter Market</strong> - Located at the Porter Commons building the Porter Market offers Yerba Mate
-     as well ready to go meals, a varety of hand made espresso drinks, snacks and sandwhiches.</p>
-
-     <p><strong>Porter Laundry Room</strong> - Vending machine located at the Porter Collge laundry room carries a
+     <p><strong>Porter Laundry Room</strong> - Vending machine located at the Porter College laundry room carries a
      small selection of snacks and soft drinks. Varies on stock with Pepsi soft and energy drinks but may be stocked
-     with either Yerba Mate, Boba or Werid Tea.</p>
-      `);
-     })
-
-     //Jack Baskin Engineering College Button
-     $("#baskinBtn").click(function(){
-     $("#output").html(`
-     <p><strong>Science & Engineering Library</strong> - This library has two sets of vending machines located on the top and bottom floors of the library.
+     with either Yerba Mate, Boba or Weird Tea.</p>
+        `)
+    })
+    //Button listener for Jack Baskin Engineering College
+    $("#baskinBtn").on("click", function(){
+    $("mapImage").attr("src", "img/ucsc_campus_baskin.png");
+    $("#output").html(`
+        <p><strong>Science & Engineering Library</strong> - This library has two sets of vending machines located on the top and bottom floors of the library.
       Top floor has two vending machines stocking both snacks and drinks, stocking Yerba Mate, energy drinks and also boba.
       Bottom floor vending machines have a Pepsi vending machine and also a snack vending machine.</p>
 
-     <p><strong> atural Sciences Building</strong> - This building has two vending machines, the vending machine
+     <p><strong> Natural Sciences Building</strong> - This building has two vending machines, the vending machine
      located on the east side of the building has two snack vending machines stocked with snacks and drinks but most
-     importantly Yerba Mate. The other vending machine is a Pepsi vending machine on the 2nd floor on the west side of the building.</p>
+     Most importantly, Yerba Mate. The other vending machine is a Pepsi vending machine on the 2nd floor on the west side of the building.</p>
 
      <p><strong>Thiamin Labs</strong> - Located on the ground floor has two vending machines and
      a Pepsi vending machine, stocking snakes, soft and energy drinks but has Yerba Mate stocked,
@@ -179,25 +154,21 @@ $(document).ready(function() {
 
      <p><strong>Perk Coffee Bar</strong> - Located at the main lobby area of the Baskin Engineering Building, offers coffee, soft drinks,
      snacks available to order, does serve Yerba Mate and other items but busy throughout the day.</p>
-
-      `);
-     })
-
-     //AR Media Center and Theaters
-     $("#arcBtn").click(function(){
+        `)
+    })
+    //Button listener for ARCenter and Media Theaters
+    $("#arcBtn").on("click", function(){
+    $("#mapImage").attr("src", "img/ucsc_campus_media.png");
     $("#output").html(`
-      <p><strong>AR Center</strong> - Has vending machines at room 116, offering a snack and a Pepsi vending machine
-      but dosen't have Yerba Mate stocked.</p>
+     <p><strong>AR Center</strong> - Has vending machines at room 116, offering a snack and a Pepsi vending machine
+      but does not have Yerba Mate stocked.</p>
 
-      <p><strong>Media Theater Vending Machines</strong> - Media Theaters have two sets of vending machines, two located at
+     <p><strong>Media Theater Vending Machines</strong> - Media Theaters have two sets of vending machines, two located at
       the front of the Media Theater with a snack and drink vending machine, stocking Yerba Mate, another set of vending machines
       at the break area of the theater main stage but only has a snack and Pepsi vending machines.</p>
 
-      <p><strong>Music Classroom</strong> - Three vending machines located on the first floor of the Music Classroom with
+     <p><strong>Music Classroom</strong> - Three vending machines located on the first floor of the Music Classroom with
       drinks and snacks available. But most importantly Yerba Mate!!!.</p>
-      `);
+        `)
 
-     })
-
-  });
-
+    });
