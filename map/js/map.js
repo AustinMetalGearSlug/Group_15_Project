@@ -2,7 +2,7 @@
 
 
 //button listner for oakes college
- $("#oakesBtn").on("click", function () {
+ $("#oakesBtn").on("click", function (){
         $("#mapImage").attr("src", "img/ucsc_campus_oakes.png");
         $("#output").html(`
             <p><strong>Oakes Cafe</strong> – Located at the Oakes Commons building. Serves Yerba Mate flavors including 
@@ -171,4 +171,4 @@
       drinks and snacks available. But most importantly Yerba Mate!!!.</p>
         `)
 
-    });
+    })
