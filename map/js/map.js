@@ -26,6 +26,14 @@
      are two vending machines, one snack and one Pepsi but do not carry Yerba Mate.</p>
       `);   
     })    
+//button listner for Quarry Plaza 
+$("#quarryBtn").on("click", function (){
+     $("#mapImage").attr("src", "img/ucsc_campus_qurry.png");
+     $("#output").html(`
+      `);
+     })
+
+
 //button listner for Stevenson College 
      $("#stevensonBtn").on("click", function (){
      $("#mapImage").attr("src", "img/ucsc_campus_stevensons.png");
