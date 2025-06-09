@@ -50,7 +50,7 @@ footer {
 }
 
 #defaultChart {
-border: inset 10px; border-color: #114b04;
+border: inset 10px rgb(11, 138, 49);
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
