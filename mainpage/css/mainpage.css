@@ -4,14 +4,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, #ffae00, #ffd670);
+    background: linear-gradient(to bottom, #ffae00,#ffea00c3);
 }
 
 h1 {
     text-align: center;
     margin-top: 38px;
     margin-bottom: 25px;
-    font-size: 60px;
+    font-size: 80px;
     color: #4b0505;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
@@ -20,7 +20,7 @@ h2 {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 35px;
     color: #114b04;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -30,8 +30,8 @@ h2 {
 h3 {
     text-align: center;
     margin-top: 5px;
-    font-size: 20px;
-    color:  #ffe39b;
+    font-size: 50px;
+    color:  #ffea00c3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
 
@@ -41,7 +41,7 @@ h3 {
 p { 
     text-align: center;
     margin-top: 0px;
-    font-size: 15px;
+    font-size: 20px;
     color: #4b0505;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;

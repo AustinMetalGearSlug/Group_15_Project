@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ffc943; /* fallback yellow */
+  background: linear-gradient(to bottom, #ffae00, #ffea00c3);
   min-height: 100vh;
 }
 .border-wrap {
@@ -195,12 +195,13 @@ body {
   margin-right: auto;
 }
 .star.enabled {
-  filter: drop-shadow(0 0 15px gold);
+  filter: drop-shadow(0 0 15px silver);
   opacity: 1;
   cursor: pointer;
 }
 .star.enabled polygon {
   fill: gold !important;
+  
 }
 .star polygon {
   transition: fill 0.3s;
@@ -214,4 +215,19 @@ body {
 }
 .hidden {
   display: none;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 80px;
+  color: #114b04;
+}
+
+h2 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  color:#4b0505;
+  
 }
