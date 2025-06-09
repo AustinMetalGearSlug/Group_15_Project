@@ -1,6 +1,6 @@
 // Chart setup
 const xValues = ["Revel Berry", "Enlighten Mint", "Bluephoria", "Awakening Orange", "Lemon Elation"];
-const yValues = [35, 67, 55, 12, 8];
+const yValues = JSON.parse(localStorage.getItem('voteData')) || [35, 67, 55, 12, 8];
 const barColors = ["red", "green", "blue", "orange", "yellow"];
 
 const data = {
@@ -27,7 +27,7 @@ const config = {
   }
 };
 
-// Create only ONE chart
+
 const yerbaChart = new Chart(document.getElementById('defaultChart'), config);
 
 // Handle vote button click
@@ -35,4 +35,9 @@ document.getElementById('incrementBtn').addEventListener('click', function () {
   const selectedIndex = parseInt(document.getElementById('barSelector').value);
   yerbaChart.data.datasets[0].data[selectedIndex] += 1;
   yerbaChart.update();
+
+  // save votes to localStorage
+localStorage.setItem('voteData', JSON.stringify(yerbaChart.data.datasets[0].data));
 });
+
+
