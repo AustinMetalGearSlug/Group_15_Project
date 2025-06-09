@@ -125,4 +125,34 @@ h2 {
   height: auto;
   border-radius: 8px;
   border: 2px solid #325943;
+  text-align: center;
+}
+
+.link-section {
+  max-width: 5000px;  
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 3px #325943;
+  background-color: #F2D750;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color:#590A0A;
+  text-align: center;
+ 
+}
+
+
+.link-section button {
+  padding: 10px;
+  flex-direction: row;
+   padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #325943;
+  color: white;
+  cursor: pointer;
 }
