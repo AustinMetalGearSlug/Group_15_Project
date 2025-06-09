@@ -28,8 +28,16 @@
     })    
 //button listner for Quarry Plaza 
 $("#quarryBtn").on("click", function (){
-     $("#mapImage").attr("src", "img/ucsc_campus_qurry.png");
+     $("#mapImage").attr("src", "img/ucsc_campus_quarry.png");
      $("#output").html(`
+        <p><strong>Big Tree Campus Store Vending Machine</strong> - Does not offer
+          Yerba Mate but has other snacks and soft drinks.</p>
+
+          <p><strong>Slug Stop</strong> - Does have Yerba Mate stocked throughout the day
+           with a variety of flavors to choose but busy during peak hours.</p>
+
+          <p><strong>Iveta Campus Cafe</strong> - Serves coffee, sandwiches, breakfast but most importantly Yerba Mate 
+          stocking flavors such as Enlighten Mint, Bluephoria and Berry Lemonade.</p>
       `);
      })
 
