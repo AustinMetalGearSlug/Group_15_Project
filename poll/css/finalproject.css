@@ -52,5 +52,6 @@ footer {
 #defaultChart {
 border: inset 10px rgb(11, 138, 49);
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+width:100%;max-width:800px
 
 }
