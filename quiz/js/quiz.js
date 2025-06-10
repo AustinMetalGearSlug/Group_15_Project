@@ -1,52 +1,41 @@
 const questions = [
   {
-    question: "How do you usually drink yerba mate?",
-    options: ["With friends", "Alone", "At a cafe"],
-    labels: ["social", "solo", "urban"],
+    question: "Where is Guayaki yerba maté grown?",
+    options: ["Asia", "South America", "Australia"],
+    labels: ["South America"],
     answered: false,
     userAnswer: null
   },
   {
-    question: "Which flavor appeals to you?",
-    options: ["Citrus", "Berry", "Traditional"],
-    labels: ["fresh", "sweet", "classic"],
+    question: "How often is yerba maté harvested?",
+    options: ["Every 6-9 months", "Every 5 years", "Every 1-3 years"],
+    labels: ["Every 1-3 years"],
     answered: false,
     userAnswer: null
   },
   {
-    question: "What's your preferred energy level?",
-    options: ["Chill", "Focused", "Energized"],
-    labels: ["calm", "focus", "power"],
+    question: "How tall do yerba maté trees grow in the wild?",
+    options: ["Up to 100 feet", "Up to 50 feet", "Up to 30 feet"],
+    labels: ["Up to 100 feet"],
     answered: false,
     userAnswer: null
   },
   {
-    question: "Pick a time of day:",
-    options: ["Morning", "Afternoon", "Night"],
-    labels: ["start", "mid", "late"],
+    question: "What kind of plant is yerba maté?",
+    options: ["Green tea","Holly","Sage"],
+    labels: ["Holly"],
     answered: false,
     userAnswer: null
   },
   {
-    question: "What's your favorite activity?",
-    options: ["Sports", "Studying", "Relaxing"],
-    labels: ["active", "studious", "rest"],
+    question: "Which indigenous cultures cultivated, and enjoyed yerba maté?",
+    options: ["The Yanomami, Wayuu, and Tikuna…" , "The Mayans, Olmec, Aztec, and Inca…" , "The Guaraní, Tupí, Jibaro, Quechua, and Kaingang… "],
+    labels: ["The Guaraní, Tupí, Jibaro, Quechua, and Kaingang…"],
     answered: false,
     userAnswer: null
   }
 ];
-
-const twoInputResults = {
-  "social-calm":   "You’re a chill socialite! Mate is your excuse for good company and good vibes.",
-  "social-focus":  "Social and focused—you lead group study sessions!",
-  "social-power":  "You’re the spark of the party. Friends and energy—what a combo!",
-  "solo-calm":     "You recharge alone with mate, embracing peace and reflection.",
-  "solo-focus":    "Solo and focused—you get things done on your own terms.",
-  "solo-power":    "You power through the day, independently unstoppable!",
-  "urban-calm":    "Urban explorer, chill mood. You sip mate while people-watching at your favorite café.",
-  "urban-focus":   "Café crawler with a focused mindset. Work, art, life—you're doing it all.",
-  "urban-power":   "The city can barely keep up! You energize your urban adventures with mate.",
-};
+ 
 
 const cans = [...document.querySelectorAll('.can')];
 const star = document.getElementById('star');
@@ -107,25 +96,9 @@ function checkAllAnswered() {
 }
 
 function showResult() {
-  // Use Q1 and Q3 for output (indexes 0 and 2)
-  const key1 = questions[0].labels[questions[0].userAnswer];
-  const key2 = questions[2].labels[questions[2].userAnswer];
-  const resultKey = `${key1}-${key2}`;
-  let resultText = twoInputResults[resultKey] ||
-    "You’ve got a mate style all your own!";
-
-  // Append favorite flavor (Q2, index 1)
-  const flavor = questions[1].options[questions[1].userAnswer];
-  resultText += ` <br><span style="font-size:1.15em;">Your favorite flavor is <b>${flavor}</b>.</span>`;
-
-  let choicesText = `<br><div style="font-size:1.1em">Your choices:</div>`;
-  questions.forEach((q, i) => {
-    choicesText += `<div><b>Q${i+1}:</b> ${q.options[q.userAnswer]}</div>`;
-  });
-  resultDiv.innerHTML = `<div>${resultText}</div>` + choicesText;
+ 
   resultDiv.classList.remove('hidden');
 }
-
 // Add vertical borders on load
 window.addEventListener('DOMContentLoaded', () => {
   const left = document.createElement('div');
