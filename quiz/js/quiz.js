@@ -126,7 +126,7 @@ function showResult() {
   resultDiv.classList.remove('hidden');
 }
 
-/* Add vertical borders on load */
+// Add vertical borders on load
 window.addEventListener('DOMContentLoaded', () => {
   const left = document.createElement('div');
   left.className = "border-left";
