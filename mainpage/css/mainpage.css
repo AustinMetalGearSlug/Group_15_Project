@@ -4,15 +4,51 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, #f4c04e, #fbdc8f);
+    background: linear-gradient(to bottom, #ffae00,#ffea00c3);
 }
 
 h1 {
     text-align: center;
-    margin-top: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 38px;
+    margin-bottom: 25px;
+    font-size: 80px;
+    color: #4b0505;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    color: #114b04;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+h3 {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 50px;
+    color:  #ffea00c3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+
+
+}
+
+p { 
+    text-align: center;
+    margin-top: 0px;
+    font-size: 20px;
+    color: #4b0505;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+
+
+}
 
 .links {
     margin-top: auto;
@@ -23,18 +59,21 @@ h1 {
 }
 
 button {
-    color: black;
-    background: #fff7a3;
-    padding: 10px 20px;
+    color: #ffae00;
+    background: #114b04;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     border-radius: 15px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     transition: box-shadow 0.3s ease;
 }
 
 button:hover {
-    box-shadow: 0px 5px 10px whitesmoke;
+    box-shadow: 0px 5px 10px  #4b0505;
     transform: scale(1.07);
-    background: #ffe14a;
+    background:  silver;
+    color: #114b04;
     font-weight: bolder;
 }

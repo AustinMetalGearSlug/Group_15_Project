@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 183, 76);
+    background: linear-gradient(to bottom, #ffae00, #ffea00c3);
     border-right: 10px solid transparent;
     border-bottom: 5px solid transparent;
     border-top: 5px solid transparent;
@@ -7,13 +7,51 @@ body {
     border-right-width: 20px;
     border-bottom-width: 20px;
     border-top-width: 20px;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1, h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 38px;
+    margin-bottom: 25px;
+    font-size: 80px;
+    color: #4b0505;
+}
+    
+h2 {
+    color: #114b04; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 35px ;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+h3 {
+    color: #ffea00c3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    font-size: 80px ;
+    font-style: italic;
+}
+
+label {
+    color: #4b0505;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+footer {
+
+    padding: 30px;
 }
 
 #defaultChart {
 border: inset 10px rgb(11, 138, 49);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+width:100%;max-width:800px
 
 }
