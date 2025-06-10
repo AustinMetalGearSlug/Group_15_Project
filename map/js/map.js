@@ -1,8 +1,7 @@
-
-
+//created on May 27th, 2025 by Austin Allen for Group 15 YERBA NOW
 
 //button listner for oakes college
- $("#oakesBtn").on("click", function (){
+ $("#oakesBtn").on("click", function () {
         $("#mapImage").attr("src", "img/ucsc_campus_oakes.png");
         $("#output").html(`
             <p><strong>Oakes Cafe</strong> – Located at the Oakes Commons building. Serves Yerba Mate flavors including 
@@ -17,7 +16,7 @@
      })
 //button listner for McHenry library 
      $("#henryBtn").on("click", function() {
-        $("#mapImage").attr("src", "img/ucsc_campus_henry.png");
+        $("#mapImage").attr("src", "img/ucsc_campus_mchenry.png");
         $("#output").html(`
      <p><strong>McHenry Library Global Village Cafe</strong> - Cafe serves coffee, sandwiches, pastries and also a 
      variety of Yerba Mate drinks to choose but busy during in peak hours in the morning and afternoon.</p>
@@ -27,6 +26,22 @@
      are two vending machines, one snack and one Pepsi but do not carry Yerba Mate.</p>
       `);   
     })    
+//button listner for Quarry Plaza 
+$("#quarryBtn").on("click", function (){
+     $("#mapImage").attr("src", "img/ucsc_campus_quarry.png");
+     $("#output").html(`
+        <p><strong>Big Tree Campus Store Vending Machine</strong> - Does not offer
+          Yerba Mate but has other snacks and soft drinks.</p>
+
+          <p><strong>Slug Stop</strong> - Does have Yerba Mate stocked throughout the day
+           with a variety of flavors to choose but busy during peak hours.</p>
+
+          <p><strong>Iveta Campus Cafe</strong> - Serves coffee, sandwiches, breakfast but most importantly Yerba Mate 
+          stocking flavors such as Enlighten Mint, Bluephoria and Berry Lemonade.</p>
+      `);
+     })
+
+
 //button listner for Stevenson College 
      $("#stevensonBtn").on("click", function (){
      $("#mapImage").attr("src", "img/ucsc_campus_stevensons.png");
@@ -86,7 +101,7 @@
         `)
      })
      //Button listner for Rachel Carson College
-     $("#rachelBtn").on("click", function(){
+     $("#carsonBtn").on("click", function(){
      $("#mapImage").attr("src", "img/ucsc_campus_carson.png");
      $("#output").html(`
         <p><strong>Rachel Carson Dorms A/L and B/L</strong> - Both dorm buildings at Rachel Carson offer vending machines stocking
@@ -115,6 +130,14 @@
        energy drinks.</p>   
         `)
     })
+    //Button listner for Merrill College
+    $("#merrillBtn").on("click", function(){
+    $("#mapImage").attr("src", "img/ucsc_campus_merrill.png");
+    $("#output").html(`
+    <p><strong>Merrill Market</strong> - Located at the Merrill College plaza offers 
+    Yerba Mate as well as coffee, snacks, meals and other grocery and convenience items, but who wants that?.</p>
+      `)
+    })
     //Button listener for Porter College 
     $("#porterBtn").on("click", function(){
     $("#mapImage").attr("src", "img/ucsc_campus_porter.png");
@@ -129,7 +152,7 @@
     })
     //Button listener for Jack Baskin Engineering College
     $("#baskinBtn").on("click", function(){
-    $("mapImage").attr("src", "img/ucsc_campus_baskin.png");
+    $("#mapImage").attr("src", "img/ucsc_campus_baskin.png");
     $("#output").html(`
         <p><strong>Science & Engineering Library</strong> - This library has two sets of vending machines located on the top and bottom floors of the library.
       Top floor has two vending machines stocking both snacks and drinks, stocking Yerba Mate, energy drinks and also boba.
@@ -158,7 +181,7 @@
     })
     //Button listener for ARCenter and Media Theaters
     $("#arcBtn").on("click", function(){
-    $("#mapImage").attr("src", "img/ucsc_campus_media.png");
+    $("#mapImage").attr("src", "img/ucsc_campus_arc.png");
     $("#output").html(`
      <p><strong>AR Center</strong> - Has vending machines at room 116, offering a snack and a Pepsi vending machine
       but does not have Yerba Mate stocked.</p>
@@ -171,4 +194,4 @@
       drinks and snacks available. But most importantly Yerba Mate!!!.</p>
         `)
 
-    })
+    });
