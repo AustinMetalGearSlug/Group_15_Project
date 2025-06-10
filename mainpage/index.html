@@ -12,6 +12,8 @@
 
       <h1>MATÉ NOW</h1>
 
+      <p><span style="color:  #114b04e9; font-size: 30px; font-weight: 100; font-style: italic;"> Check out the UCSC YERBA MAP(É) to find the nearest place to get yourself a Guayaki Yerba Maté on campus </span></p>
+
       <h2> WHICH GUAYAKI YERBA MATÉ FLAVOR IS THE BEST?</h2>
 
       <h3> SLUGS WANT TO KNOW</h3>
@@ -42,15 +44,64 @@
 
 
 
-<p><span style="color:  #114b04e9; font-size: 30px; font-weight: 100; font-style: italic;"> Check out the UCSC YERBA MAP(É) to find the nearest place to get yourself a Guayaki Yerba Maté on campus </span></p>
+
 
        
 </div>
 
+<h4> PICK YOUR FAVORITE YERBA MATÉ FLAVOR BELOW FOR A SLUGS ONLY FLAVOR HOROSCOPE</h4>
 
+<div style="padding-bottom: 30px;"> 
+  <div class="flavorbuttons">
+
+  <button onclick="showImageBerry()">Berry</button>
+  <button onclick="showImageLemon()">Lemon</button>
+  <button onclick="showImageMint()">Mint</button>
+  <button onclick="showImageBlue()">Blue</button>
+  <button onclick="showImageOrange()">Orange</button>
+  </div>
+
+  <img id="Berry" src="img/Berry.png" >
+  <img id="Lemon" src="img/Lemon.png" >
+  <img id="Mint" src="img/Mint.png" >
+  <img id="Blue" src="img/Blue.png" >
+  <img id="Orange" src="img/Orange.png" >
+
+
+  <script>function showImageBerry() { 
+     document.getElementById("Lemon").style.display = "none"; 
+      document.getElementById("Mint").style.display = "none"; 
+      document.getElementById("Blue").style.display = "none";
+      document.getElementById("Orange").style.display = "none";
+      var img = document.getElementById('Berry');   img.style.display = 'block'; } </script>
+  <script>function showImageLemon() {   
+    document.getElementById("Berry").style.display = "none"; 
+      document.getElementById("Mint").style.display = "none"; 
+      document.getElementById("Blue").style.display = "none";
+      document.getElementById("Orange").style.display = "none";
+      var img = document.getElementById('Lemon');   img.style.display = 'block'; } </script>
+  <script>function showImageMint() {  
+    document.getElementById("Lemon").style.display = "none"; 
+      document.getElementById("Berry").style.display = "none"; 
+      document.getElementById("Blue").style.display = "none";
+      document.getElementById("Orange").style.display = "none";
+       var img = document.getElementById('Mint');   img.style.display = 'block'; } </script>
+  <script>function showImageBlue() {  
+    document.getElementById("Lemon").style.display = "none"; 
+      document.getElementById("Mint").style.display = "none"; 
+      document.getElementById("Berry").style.display = "none";
+      document.getElementById("Orange").style.display = "none";
+       var img = document.getElementById('Blue');   img.style.display = 'block'; } </script>
+  <script>function showImageOrange() { 
+    document.getElementById("Lemon").style.display = "none"; 
+      document.getElementById("Mint").style.display = "none"; 
+      document.getElementById("Blue").style.display = "none";
+      document.getElementById("Berry").style.display = "none";
+        var img = document.getElementById('Orange');   img.style.display = 'block'; } </script>
+
+</div>
 
     </body>
-
 
 
 
