@@ -19,7 +19,8 @@ h1 {
 h2 {
     text-align: center;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     font-size: 35px;
     color: #114b04;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -30,7 +31,7 @@ h2 {
 h3 {
     text-align: center;
     margin-top: 5px;
-    font-size: 50px;
+    font-size: 40px;
     color:  #ffea00c3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
@@ -41,7 +42,7 @@ h3 {
 h4 {
     text-align: center;
     margin-top: 5px;
-    font-size: 30px;
+    font-size: 45px;
     color:  #4b0505;;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
