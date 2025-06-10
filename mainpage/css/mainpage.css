@@ -120,3 +120,32 @@ button:hover {
 #Orange {
     display: none;
 }
+
+.link-section {
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+button {
+    color: #ffae00;
+    background: #114b04;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0px 5px 10px  #4b0505;
+    transform: scale(1.07);
+    background:  silver;
+    color: #114b04;
+    font-weight: bolder;
+}
+
